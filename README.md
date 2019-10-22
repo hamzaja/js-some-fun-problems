@@ -25,3 +25,9 @@ At the end , it shows that Using ASCII code is faster using performance.now()
     square Array Using iteration : performance time = 2009.6876490041614MS
 
 From the following results its very clear that if we have large number of array then the best practice is to avoid iteration
+
+
+
+3. anagram:  check if stings are anagram of each other
+
+4. duplicate: returns all duplicate items of an array
