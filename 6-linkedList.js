@@ -14,12 +14,12 @@
 
 
 
-(function() {
-onload = setInterval(function(){
-if (document.querySelectorAll(".timer")[1].firstElementChild.innerText === "00:00:00"){
-    document.querySelectorAll(".floattopright")[2].click()}
- }, 1000);
-})();
+  (function() {
+  onload = setInterval(function(){
+  if (document.querySelectorAll(".timer")[1].firstElementChild.innerText === "00:00:00"){
+      document.querySelectorAll(".floattopright")[2].click()}
+   }, 1000);
+  })();
 
 
 
@@ -48,6 +48,13 @@ class SinglyLinkedList{
     this.length++
     return this
   }
+  pop(){
+    
+  }
+
+
+
+
 }
 let list = new SinglyLinkedList()
 console.log(list.push('Abc'))
