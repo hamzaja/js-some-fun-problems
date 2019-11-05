@@ -12,17 +12,6 @@
 
 
 
-
-
-  (function() {
-  onload = setInterval(function(){
-  if (document.querySelectorAll(".timer")[1].firstElementChild.innerText === "00:00:00"){
-      document.querySelectorAll(".floattopright")[2].click()}
-   }, 1000);
-  })();
-
-
-
 class Node{
   constructor(val){
     this.val = val
@@ -49,7 +38,17 @@ class SinglyLinkedList{
     return this
   }
   pop(){
-    
+    if (!this.head) return undefined
+    let current = this.head
+    let newtail = current
+    while (current.next){
+      newtail = current
+      current = current.next
+    }
+    this.tail = newtail
+    this.tail.next = null
+    this.length--
+    return current;
   }
 
 
@@ -60,3 +59,4 @@ let list = new SinglyLinkedList()
 console.log(list.push('Abc'))
 console.log(list.push('def'))
 console.log(list.push('ghi'))
+console.log(list.push('jkl'))
