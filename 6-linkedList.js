@@ -64,6 +64,19 @@ class SinglyLinkedList{
     return oldhead
 
   }
+  unshift(val){
+      let newhead = new Node(val)
+      if(!this.head){
+        this.head = newhead
+        this.tail = this.head
+      }
+      else{
+        newhead.next = this.head
+        this.head = newhead
+      }
+      this.length++
+      return this
+  }
 
 }
 let list = new SinglyLinkedList()
