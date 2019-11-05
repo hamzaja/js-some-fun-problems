@@ -85,6 +85,11 @@ class SinglyLinkedList{
     }
     return val
   }
+  set(ind, value){
+      if(this.get(ind)){
+        return this.get(ind).val = value
+      }
+  }
 
 }
 let list = new SinglyLinkedList()
