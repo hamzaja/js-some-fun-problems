@@ -77,6 +77,14 @@ class SinglyLinkedList{
       this.length++
       return this
   }
+  get(ind){
+    if (ind < 0 || ind > this.length) return undefined
+    let val = this.head;
+    for (let i=0; i<ind; i++){
+      val = val.next
+    }
+    return val
+  }
 
 }
 let list = new SinglyLinkedList()
