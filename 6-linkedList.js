@@ -115,7 +115,20 @@ class SinglyLinkedList{
   //     this.length++
   //   }
   //   return this
-  // }
+  }
+  remove(ind){
+    if(ind < 0 || index >= this.length) return false
+    if(ind === 0) return !!this.shift()
+    if(ind === this.length-1) return !!this.pop()
+    let previousvalue = this.get(ind-1)
+    let valueToRemove = previous.next
+    let nextValue = valueToRemove.next
+    previousvalue.next = nextValue
+    valueToRemove = null
+    this.length--
+    return true
+  }
+
 
 }
 let list = new SinglyLinkedList()
