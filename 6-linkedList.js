@@ -129,19 +129,18 @@ class SinglyLinkedList{
     return true
   }
   reverse(){
-    let head = this.head
+    let headPlaceHolder = this.head
     this.head = this.tail
-    this.tail = head
-    let next, previous;
+    this.tail = headPlaceHolder
+    let next, previous=null;
     for(let i=0; i < this.length; i++){
-      next = head.next
-      head.next = previous
-      previous = head
-      head = next
+      next = headPlaceHolder.next
+      headPlaceHolder.next = previous
+      previous = headPlaceHolder
+      headPlaceHolder = next
     }
     return this
   }
-
 
 }
 let list = new SinglyLinkedList()
