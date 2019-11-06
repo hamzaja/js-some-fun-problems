@@ -90,6 +90,32 @@ class SinglyLinkedList{
         return this.get(ind).val = value
       }
   }
+  insert(ind, value){
+    if(ind<0 || ind > this.length) return false
+    if(ind === this.length){
+      this.push(value)
+      return true
+    }
+    if(ind === 0) return !!this.unshift(value)
+    let newNode = new Node(value)
+    let previous = this.get(ind-1)
+    let placeHolder = previous.next
+    previous.next = newNode
+    newNode.next = placeHolder
+    this.length++
+    return true
+
+  //   let placeHolder = this.get(ind)
+  //   let newNode = new Node(value)
+  //   let nextNode
+  //   if(placeHolder){
+  //     nextNode = placeHolder.next
+  //     placeHolder.next = newNode
+  //     newNode.next = nextNode
+  //     this.length++
+  //   }
+  //   return this
+  // }
 
 }
 let list = new SinglyLinkedList()
