@@ -87,11 +87,24 @@ class DoublyLinkedList{
   }
   set(ind,val){
     let index = this.get(ind)
-    if (index){
+    if (!index){
       return undefined
     }
     index = val
     return index
+  }
+  insert(ind,val){
+    if(ind===0) return !!this.unshift(val)
+    if(ind=== this.length) !!return this.push(val)
+    let index = this.get(ind)
+    if(!index)return false
+    let newNode = new Node(val)
+    newNode.next = index.next
+    newNode.previous = index
+    index.next.previous = newNode
+    index.next = newNode
+    length++
+    return true
   }
 
 }
