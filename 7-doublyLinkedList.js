@@ -87,6 +87,9 @@ class DoublyLinkedList{
   }
   set(ind,val){
     let index = this.get(ind)
+    if (index){
+      return undefined
+    }
     index = val
     return index
   }
