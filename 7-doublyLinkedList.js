@@ -69,6 +69,22 @@ class DoublyLinkedList{
     this.length++
     return this
   }
+  get(ind){
+    if (ind < 0 || ind > this.length) return undefined
+    let val
+    if (ind >= this.length/2){
+      val = this.head
+      for(let i=0; i<=ind; i++){
+        val = val.next
+      }
+    }else {
+      val = this.tail
+      for (let i=0; i<=ind;i++){
+        val= val.previous
+      }
+    }
+    return val.val
+  }
 
 }
 
@@ -77,3 +93,12 @@ list.push(1)
 list.push(2)
 list.push(3)
 list.push(4)
+list.push(5)
+list.push(6)
+list.push(7)
+list.push(8)
+list.push(9)
+list.push(10)
+list.push(11)
+list.push(12)
+list.push(13)
