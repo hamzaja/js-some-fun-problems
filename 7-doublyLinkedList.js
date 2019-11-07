@@ -70,20 +70,25 @@ class DoublyLinkedList{
     return this
   }
   get(ind){
-    if (ind < 0 || ind > this.length) return undefined
+    if (ind < 0 || ind >= this.length) return undefined
     let val
-    if (ind >= this.length/2){
+    if (ind <= Math.ceil(this.length/2)){
       val = this.head
-      for(let i=0; i<=ind; i++){
+      for(let i=1; i<=ind; i++){
         val = val.next
       }
     }else {
       val = this.tail
-      for (let i=0; i<=ind;i++){
+      for (let i=0; i<(this.length-ind)-1;i++){
         val= val.previous
       }
     }
-    return val.val
+    return val
+  }
+  set(ind,val){
+    let index = this.get(ind)
+    index = val
+    return index
   }
 
 }
