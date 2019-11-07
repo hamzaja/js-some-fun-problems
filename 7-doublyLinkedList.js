@@ -51,10 +51,23 @@ class DoublyLinkedList{
     }else {
       this.head = oldHead.next
       this.head.previous = null
-      oldhead.next = null
+      oldHead.next = null
     }
     this.length--
     return oldHead
+  }
+  unshift(val){
+    let newHead = new Node(val)
+    if(!this.head){
+      this.head = newHead
+      this.tail = newHead
+    }else{
+      newHead.next = this.head
+      this.head.previous = newHead
+      this.head = newHead
+    }
+    this.length++
+    return this
   }
 
 }
