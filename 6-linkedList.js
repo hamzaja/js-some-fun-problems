@@ -4,11 +4,12 @@
 //     this.next = null
 //   }
 // }
-// let first= new Node("hi")
-// first.next = new Node("there")
-// first.next.next = new Node("how")
-// first.next.next.next = new Node("are")
-// console.log(first)
+let first= new Node("hey,")
+first.next = new Node("there")
+first.next.next = new Node("how")
+first.next.next.next = new Node("are")
+first.next.next.next.next = new Node("you")
+console.log(first)
 
 
 
@@ -18,6 +19,7 @@ class Node{
     this.next = null
   }
 }
+
 class SinglyLinkedList{
   constructor(){
     this.length = 0
@@ -144,7 +146,7 @@ class SinglyLinkedList{
 
 }
 let list = new SinglyLinkedList()
-console.log(list.push('Abc'))
-console.log(list.push('def'))
-console.log(list.push('ghi'))
-console.log(list.push('jkl'))
+console.log(list.push('hey'))
+console.log(list.push('how'))
+console.log(list.push('are'))
+console.log(list.push('you'))
