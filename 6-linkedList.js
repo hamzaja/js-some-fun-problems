@@ -144,6 +144,24 @@ class SinglyLinkedList{
     return this
   }
 
+
+
+
+
+
+//   function removeNodes(listHead, x) {
+//     // Write your code here
+//     let val = listHead;
+//     let previous = null
+//     while(val.next==null){
+//         if(val.next > x){
+//             val = val.next.next
+//         }else(val = val.next)
+//     }
+//     return val
+//
+// }
+
 }
 let list = new SinglyLinkedList()
 console.log(list.push('hey'))
