@@ -14,7 +14,7 @@ class HashTable {
   }
 }
 
-// 
+//
 // function hash(item, arrayLength){
 //   let total= 0;
 //   for(let i=0; i<item.length; i++){
