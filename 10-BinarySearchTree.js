@@ -47,12 +47,12 @@ class BinarySearchTree{
   //   return this
   // }
   insert(value){
-    var newNode = new Node(value);
+    const newNode = new Node(value);
     if(this.root === null){
         this.root = newNode;
         return this;
     }
-    var current = this.root;
+    const current = this.root;
     while(true){
         if(value === current.value) return undefined;
         if(value < current.value){
@@ -102,6 +102,42 @@ class BinarySearchTree{
   //
   //     }
   // }
+
+  // find(val){
+  //   if(!this.root) return false
+  //   let current = this.root
+  //   while (true) {
+  //     if(current.left === null && current.right === null){
+  //       return false
+  //     }
+  //     else if(val > current.value ){
+  //       current = current.right
+  //     }
+  //     else if(val < current.value){
+  //       current = current.left
+  //     }
+  //     else if(val === current.value){
+  //       return true
+  //     }
+  //   }
+  //
+  // }
+  find(value){
+        if(this.root === null) return false;
+        var current = this.root,
+            found = false;
+        while(current && !found){
+            if(value < current.value){
+                current = current.left;
+            } else if(value > current.value){
+                current = current.right;
+            } else {
+                found = true;
+            }
+        }
+        if(!found) return undefined;
+        return current;
+    }
 
 
 
