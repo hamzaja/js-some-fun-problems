@@ -165,7 +165,29 @@ class BinarySearchTree{
     return data
   }
 
+  // depth first search Post order
+  dfsPostOrder(){
+    let data = []
+    function traverse(node){
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+      data.push(node.value)
+    }
+    traverse(this.root)
+    return data;
+  }
 
+  // depth first search In order
+  dfsInOrder(){
+    let data = []
+    function traverse(node){
+      if (node.left) traverse(node.left)
+      data.push(node.value)
+      if (node.right) traverse(node.right)
+    }
+    traverse(this.root)
+    return data;
+  }
 
 
 
