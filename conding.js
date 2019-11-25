@@ -12,7 +12,6 @@ class Abc extends Component{
           {username}
           {this.state.greeting}
         </div>
-
       )
     }
 

@@ -12,7 +12,6 @@ class Node{
     this.value = val
     this.right = null
     this.left = null
-
   }
 }
 
@@ -137,7 +136,23 @@ class BinarySearchTree{
     }
     if(!found) return undefined;
     return current;
-}
+  }
+
+// tree travesal
+// breath first search
+  bfs(){
+    let data = []
+    let queue = []
+    queue.push(this.root)
+    while (queue.length) {
+      queue.shift()
+      data.push(node.value)
+      if(node.left) queue.push(node.left)
+      if(node.right) queue.push(node.right)
+    }
+    return data
+
+  }
 
 
 
