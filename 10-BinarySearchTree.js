@@ -138,7 +138,7 @@ class BinarySearchTree{
     return current;
   }
 
-// tree travesal
+// tree traversal
 // breath first search
   bfs(){
     let data = []
@@ -151,7 +151,18 @@ class BinarySearchTree{
       if(node.right) queue.push(node.right)
     }
     return data
+  }
 
+  // depth first search pre order
+  dfsPreOrder(){
+    let data = []
+    function traverse(Node){
+      data.push(node.value)
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+    }
+    traverse(this.root)
+    return data
   }
 
 
